@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Symptoms</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/intro.css') }}">
+    </head>
+    <body style="background-color:lightsteelblue"><br>
+        <div class="progress">
+            <div class="progress-bar bg-success" style="width:10%;color: navy;">Gender and Age</div>
+            <div class="progress-bar bg-success" style="width:0%;"><span style="color: navy">Questions</span></div>
+        </div><br>
+        <div class="container">
+            <div class="login-form">
+                <form method="POST">
+                    <script type="text/javascript" src="{{ url_for('static', filename='javascript/intro.js') }}"></script>
+                    <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: xx-large;color: navy;">Answer a few questions for us</p>
+                    <div style>
+                    <p id="question" style="animation-fill-mode: forwards;text-align:left; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size:x-large;color:darkgoldenrod;">Do you smoke??</p>
+                    <!-- Default inline 1-->
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                    <script type="text/javascript" src="{{url_for('static', filename='javascript/intro.js')}}"></script>
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                      <input type="checkbox" class="custom-control-input" id="defaultInline1">
+                      <label class="custom-control-label" for="defaultInline1">Yes</label>
+                    </div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <!-- Default inline 2-->
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                      <input type="checkbox" class="custom-control-input" id="defaultInline2">
+                      <label class="custom-control-label" for="defaultInline2">No</label>
+                    </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <div class="custom-control custom-checkbox custom-control-inline">
+                        <input type="checkbox" class="custom-control-input" id="defaultInline2">
+                        <label class="custom-control-label" for="defaultInline2">Don't know</label>
+                    </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button id="done" class="btn btn-primary">Done</button>
+        
+                    <br><br><br>
+                    </div>
+                    <p><a href="{{ url_for('intro') }}"><span style="font-size: x-large;color:red;width:50px;">Back</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="{{ url_for('symp') }}"><span style="font-size: x-large;color:green;">Next</span></a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+
+    

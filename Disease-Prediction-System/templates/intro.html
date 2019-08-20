@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Disease Predictor</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/intro.css') }}">
+        <link type="text/javascript" href="{{ url_for('static', filename='javascript/intro.js') }}">
+    </head>
+    <body style="background-color:lightsteelblue"><br>
+        <div class="progress">
+            <div class="progress-bar bg-success" style="width:0%;color: navy">Gender and Age</div>
+        </div><br>
+        <div class="container">
+            <div class="login-form">
+                <form method="POST">
+                    <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: large;color: navy;">Select your gender:</p>
+                    <img src="static/images/male.png">&nbsp;
+                    <input type="radio" name="optradio" unchecked>Male &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="static/images/female.png">&nbsp;
+                    <input type="radio" name="optradio" unchecked>Female
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select class="custom-select" style="width:200px;">
+                        <option value="" disabled selected >Select your age:</option>
+                        <option value="0">--</option>
+                        <option value="1">15-20</option>
+                        <option value="2">21-30</option>
+                        <option value="3">31-40</option>
+                        <option value="3">41-50</option>
+                        <option value="3">51-60</option>
+                        <option value="3">61-80</option>
+                    </select>
+                    <br><br><br><br>
+                    <a href="{{ url_for('main') }}"><span style="font-size: x-large;color:red;width:50px;">Back</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="{{ url_for('interview') }}"><span style="font-size: x-large;color:green;">Next</span></a>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

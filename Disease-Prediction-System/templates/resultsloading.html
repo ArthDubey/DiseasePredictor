@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Symptoms</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/intro.css') }}">
+    </head>
+    <body style="background-color:lightsteelblue">
+        <!--CSS Spinner-->
+        <div class="spinner-wrapper">
+            <div class="spinner"></div>
+        </div><script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script><script type="text/javascript" href="{{ url_for('static', filename='javascript/intro.js') }}"></script>
+        <br>
+        {%if count==10:%}
+            <p><a href="{{ url_for('results') }}"><span style="font-size: x-large;color:red;width:50px;">View Result</span></a>
+        {%endif%}
+    </body>
+    </html>

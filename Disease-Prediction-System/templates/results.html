@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Symptoms</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/intro.css') }}">
+    </head>
+    <body style="background-color:lightsteelblue">
+        <br>
+        <script type="text/javascript" src="{{url_for('static', filename='js/intro.js')}}"></script>
+        <div class="progress">
+            <div class="progress-bar bg-success" style="width:10%;color: navy;">Gender and Age</div>
+            <div class="progress-bar bg-success" style="width:20%;"><span style="color: navy">Questions</span></div>
+            <div class="progress-bar bg-success" style="width:40%;"><span style="color: navy">Symptoms</span></div>
+            <div class="progress-bar bg-warning" style="width:30%;"><span style="color: navy">Results</span></div>
+        </div><br>
+        <div class="container">
+            <div class="alert alert-warning">
+                <a href="#" class="close" data-dismiss="alert">&times;</a>
+                <img src="static/images/siren.png"><br>
+                <strong>Warning!</strong> This is not a qualified medical opinion.<br> Attention from medical experts will be necessary for worst conditions.
+            </div>
+        </div>
+        <div class="container">
+            <div class="login-form">
+                <form><p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: large;color: navy;">Your Symptoms were:</p><table>
+                    {% for key,value in symptoms.items():%}
+                        <tr>
+                            <td>{{key}}</td>
+                            <td>{{value}}</td>
+                        </tr>
+                    {% endfor %}
+                </table><br>
+                <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: large;color: navy;">Predicted diseases are:</p>
+                <table cellpadding="5">
+                    {%for key,value in results.items():%}
+                        <tr>
+                            <td colspan="2">{{key}}</td>
+                            <td><meter value="{{value}}"  min="0" max="1" optimum="1" low="0.45" high="0.65"></meter></td>
+                        </tr>
+                    {%endfor%}
+                </table>
+                <p><a href="{{ url_for('main') }}"><span style="font-size: x-large;color:red;width:50px;">Start again</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </p></form>
+            </div>
+        </div>
+    </body>
+</html>
+
+    

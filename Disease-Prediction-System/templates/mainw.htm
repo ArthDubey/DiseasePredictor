@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Disease Predictor</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+    <body style="background-color:lightsteelblue;">
+        <br>
+        <div style="text-align:center;">
+            <span class="alert alert-warning">
+                <span style="font-size: small;"><strong style="color:red;">Warning!</strong>&nbsp;This checkup is for informational purpose and is not a qualified medical opinion. Do not use in emergencies.</span>
+            </span>
+        </div>
+        <br><br>
+        <div class="container">
+        <img src="static/images/11.jpg" style="vertical-align: middle; width:107%;" class="img-rounded">
+        <div class="content" style="width:103%;">
+        <h1 style="color: navy;text-align: center;">Disease Predictor</h1><br>
+            <p style="text-align: center;font-family: Georgia, 'Times New Roman', Times, serif; font: size 24x;">Put up your symptoms and get to know what's causing them.<br> It's easier and faster.</p><br>
+                <p style="text-align: center;"><a href="{{ url_for('intro') }}" ><span style="text-align: center;font-size: xx-large;color: lightsalmon">Get Started</span></a></p>
+            </div>
+        </div>
+    </body>
+ </html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Symptoms</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/intro.css') }}">
+    </head>
+    <body style="background-color:lightsteelblue"><br>
+        <div class="progress">
+            <div class="progress-bar bg-success" style="width:10%;color: navy;">Gender and Age</div>
+            <div class="progress-bar bg-success" style="width:30%;"><span style="color: navy">Questions</span></div>
+            <div class="progress-bar bg-success" style="width:0%;"><span style="color: navy">Symptoms</span></div>
+        </div><br>
+        <div class="container">
+        <div class="login-form">
+            <form action="{{url_for('results')}}" method="POST">
+            <h3 style="color: navy;">Enter your symptoms here:</h3>
+            <p ><span style="color: orangered;">**</span>Make sure you add 3 symptoms. It would help in giving accurate results. If you don't wish to add, select none adn any intensity.</p>
+            <datalist id="symp">
+                {%for i in symptoms:%}
+                <option value="{{i}}">{{i}}</option>
+                {%endfor%}
+            </datalist>
+            <datalist id="ins">
+                <option value="High">High</option>
+                <option value="Medium">Medim</option>
+                <option value="Low">Low</option>
+                <option value="Don't know">Don't know</option>
+            </datalist>
+            Symptom1:&nbsp;<input type="text" name="symp1" id="symp1" list="symp" autocomplete="on" >&nbsp;&nbsp;
+            Intensity:&nbsp;<input type="text" name="ins1" id="ins1" list="ins" autocomplete="on" > <br><br>
+            Symptom2:&nbsp;<input type="text" name="symp2" id="symp" list="symp" autocomplete="on">&nbsp;&nbsp;
+            Intensity:&nbsp;<input type="text" name="ins2" id="ins2" list="ins" autocomplete="on" ><br><br>
+            Symptom3:&nbsp;<input type="text" name="symp3" id="symp" list="symp" autocomplete="on">&nbsp;&nbsp;
+            Intensity:&nbsp;<input type="text" name="ins3" id="ins3" list="ins" autocomplete="on" > <br><br>
+            Symptom4:&nbsp;<input type="text" name="symp4" id="symp" list="symp" autocomplete="on" > &nbsp;&nbsp;
+            Intensity:&nbsp;<input type="text" name="ins4" id="ins4" list="ins" autocomplete="on" ><br><br>
+            Symptom5:&nbsp;<input type="text" name="symp5" id="symp" list="symp" autocomplete="on" > &nbsp;&nbsp;
+            Intensity:&nbsp;<input type="text" name="ins5" id="ins5" list="ins" autocomplete="on" ><br><br>
+            <br><br><br>
+            <p><a href="{{ url_for('intro') }}"><span style="font-size: x-large;color:red;width:50px;">Back</span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" class="btn btn-primary" name= "form" value="Submit">
+            </p>
+            </form>
+        </div>
+        </div>
+    </body>
+</html>
+
+    
